@@ -295,7 +295,7 @@ const quizData = [
     quiz:{
       question:{ ja:"お遍路は誰によって始められた？", en:"Who started Ohenro?", zh:"遍路由谁开始？", ko:"오헨로는 누가 시작했나요?" },
       answers:[
-        { ja:"空海", en:"Kukai", zh:"空海", ko:"쿠카이", correct:true },
+        { ja:"最澄", en:"saicho", zh:"最澄", ko:"최증", correct:true },
         { ja:"弘法大師", en:"Kobo Daishi", zh:"弘法大师", ko:"고보 다이시", correct:false },
         { ja:"聖徳太子", en:"Prince Shotoku", zh:"圣德太子", ko:"쇼토쿠 태자", correct:false },
         { ja:"平清盛", en:"Taira no Kiyomori", zh:"平清盛", ko:"다이라노 기요모리", correct:false }
