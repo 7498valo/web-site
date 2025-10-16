@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>共有サイト</title>
+<style>
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  background: linear-gradient(-45deg, #89f7fe, #66a6ff, #bdb2ff, #ff8fab);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: #222;
+  text-align: center;
+}
+
+h1 {
+  font-size: 56px;
+  color: white;
+  text-shadow: 0 0 15px rgba(255,255,255,0.8);
+  margin-top: 40px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 0 15px rgba(255,255,255,0.3), 0 4px 30px rgba(0,0,0,0.2);
+}
+
+img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.7);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 45px rgba(255,255,255,0.9);
+  filter: brightness(1.2);
+}
+
+/* SNSボタン共通 */
+.share-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.share-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+.share-btn:hover {
+  transform: scale(1.3);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+/* 各SNS位置と色 */
+.share-x { background: #1DA1F2; bottom: 15px; right: 15px; }
+.share-line { background: #00C300; bottom: 15px; right: 80px; }
+.share-fb { background: #4267B2; bottom: 15px; right: 145px; }
+
+/* indexリンクボタン */
+.nemusugi {
+  color: white;
+  font-size: 50px;
+  background: rgba(255,0,0,0.7);
+  padding: 15px 25px;
+  border-radius: 20px;
+  display: inline-block;
+  text-shadow: 0 0 20px rgba(255,255,255,0.8);
+  margin: 20px 0;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.nemusugi:hover { 
+  transform: scale(1.15) rotate(-5deg); 
+  background: rgba(255,0,0,0.9);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.big-text { color: #ff1f3d; font-size: 36px; font-weight: bold; }
+div { font-size: 22px; color: #0017b0; }
+
+@media (max-width: 600px){
+  img { width: 80%; }
+  .big-text { font-size: 28px; }
+  .nemusugi { font-size: 36px; padding: 10px 20px; }
+  .share-btn { width: 40px; height: 40px; }
+  .share-btn svg { width: 22px; height: 22px; }
+}
+</style>
+</head>
+<body>
+
+<h1>『本日のみ』共有サイト</h1>
+
+<div class="container">
+  <img src="QR_590571.png" alt="お遍路の写真">
+
+  <!-- X共有ボタン -->
+  <a href="https://twitter.com/intent/tweet?text=aiueo" target="_blank" class="share-btn share-x">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 001.94-2.48 9.09 9.09 0 01-2.88 1.1 4.52 4.52 0 00-7.72 4.13A12.84 12.84 0 013 4.14a4.5 4.5 0 001.4 6.03 4.48 4.48 0 01-2.05-.57v.06a4.52 4.52 0 003.63 4.43 4.52 4.52 0 01-2.04.08 4.53 4.53 0 004.23 3.13 9.05 9.05 0 01-5.6 1.93A9.36 9.36 0 012 19.53a12.78 12.78 0 006.92 2"/>
+    </svg>
+  </a>
+
+  <!-- LINE共有ボタン -->
+  <a href="https://social-plugins.line.me/lineit/share?url=https://example.com" target="_blank" class="share-btn share-line">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M12 2C6.486 2 2 6.06 2 10.5c0 2.64 1.534 4.992 3.935 6.356L4 22l5.505-2.922C10.65 19.09 11.31 19 12 19c5.514 0 10-4.06 10-9.5S17.514 2 12 2z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook共有ボタン -->
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank" class="share-btn share-fb">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.196 2.238.196v2.463h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/>
+    </svg>
+  </a>
+
+  <p class="big-text">QRコード</p>
+
+  <!-- index.htmlに戻るリンク -->
+  <a href="index.html" class="nemusugi">⇑</a>
+
+  <p>共有してみよう</p>
+  <div>88timeお遍路コース</div>
+</div>
+
+</body>
+</html>
